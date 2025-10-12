@@ -1,4 +1,4 @@
-
+# Testing apache spark and iceberg on local
 
 # Download and setup apache spark 3.5
 1. create folder `mkdir iceberg_spark` and go inside
@@ -22,4 +22,6 @@
 --conf spark.sql.catalog.local=org.apache.iceberg.spark.SparkCatalog \
 --conf spark.sql.catalog.local.type=hadoop \
 --conf spark.sql.catalog.local.warehouse=~/iceberg_spark/warehouse`
-2. you will see scala termonal :)
+2. You will see scala terminal if everthing goes well  :)
+
+# Note : scenarios list for use cases
