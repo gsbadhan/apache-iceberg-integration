@@ -17,11 +17,7 @@
 1. create folder `mkdir warehouse` inside `iceberg_spark` 
 
 # Start apache spark
-1. `spark-shell --packages org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.4.2 \
---conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions \
---conf spark.sql.catalog.local=org.apache.iceberg.spark.SparkCatalog \
---conf spark.sql.catalog.local.type=hadoop \
---conf spark.sql.catalog.local.warehouse=~/iceberg_spark/warehouse`
+1. `spark-shell --packages org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.4.2 --conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.sql.catalog.local=org.apache.iceberg.spark.SparkCatalog --conf spark.sql.catalog.local.type=hadoop --conf spark.sql.catalog.local.warehouse=/Users/gurpreetsingh/iceberg_spark/warehouse/ --conf spark.sql.defaultCatalog=local`
 2. You will see scala terminal if everthing goes well  :)
 
 # Note : scenarios list for use cases
