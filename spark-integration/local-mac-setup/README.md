@@ -20,4 +20,9 @@
 1. `spark-shell --packages org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.4.2 --conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.sql.catalog.local=org.apache.iceberg.spark.SparkCatalog --conf spark.sql.catalog.local.type=hadoop --conf spark.sql.catalog.local.warehouse=/Users/gurpreetsingh/iceberg_spark/warehouse/ --conf spark.sql.defaultCatalog=local`
 2. You will see scala terminal if everthing goes well  :)
 
+# verify spark setup
+`spark.sql("""show catalogs """).show()`
+`spark.sql("""show databases """).show()`
+`spark.sql("""show tables in local.db """).show()`
+
 # Note : scenarios list for use cases
