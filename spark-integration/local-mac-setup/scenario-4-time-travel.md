@@ -10,6 +10,8 @@ SELECT * FROM local.db.employee
 FOR SYSTEM_TIME AS OF 7115730409057541182
 """).show()`
 
+`spark.sql(""" SELECT * FROM local.db.employee  TIMESTAMP AS OF current_timestamp() - INTERVAL 10 MINUTE  """).show()`
+
 
 # Changes history of department
 `spark.sql("SELECT * FROM local.db.department.snapshots ORDER BY committed_at DESC").show(false)`
@@ -19,3 +21,5 @@ FOR SYSTEM_TIME AS OF 7115730409057541182
 SELECT * FROM local.db.department 
 FOR SYSTEM_TIME AS OF 5965242925823455439
 """).show()`
+
+`spark.sql(""" SELECT * FROM local.db.department  TIMESTAMP AS OF current_timestamp() - INTERVAL 10 MINUTE  """).show()`
